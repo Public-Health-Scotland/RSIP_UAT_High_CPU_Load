@@ -20,8 +20,3 @@ print(paste("This session will use", num_cores, "of", run_details$max_cores, "co
 ### 02 Define how long k-means clustering should run for ----
 
 kmeans_run_time <- 120.0 # 120 minutes
-
-### 03 Amend output path
-
-#output_path <- file.path("/conf/RSIP", run_details$user, "UAT", run_details$node)
-#if(!dir.exists(output_path)){dir.create(output_path, recursive = TRUE)} # create output folder if needed

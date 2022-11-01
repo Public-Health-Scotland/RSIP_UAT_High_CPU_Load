@@ -12,12 +12,7 @@
 # on Number of Paid Items for a set number of iterations.
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 
-print("This test will take approximately 2 hours to complete.")
-
-### -- SETUP ----
-
-#benchmark_output_path <- file.path("/conf/RSIP", run_details$user, "UAT") # folder to write csv of benchmark results to
-#if(!dir.exists(benchmark_output_path)){dir.create(benchmark_output_path, recursive = TRUE)} # create output folder if needed
+print("This test will take at least 2 hours to complete.")
 
 ### -- Read prescribing open data from the CKAN open data platform ----
 
@@ -125,10 +120,10 @@ output <- dplyr::bind_rows(output_1, output_2)
 
 # Write to file
 
-#output_file <- file.path(benchmark_output_path, paste0("01_Test_0 ", stringr::str_replace_all(Sys.time(), ":", ""), ".csv"))
-#readr::write_csv(output, file = output_file, append = file.exists(output_file))
+output_file <- file.path("/mnt/homes", run_details$user, paste0("RSIP_UAT_High_CPU_Load_", stringr::str_replace_all(Sys.time(), ":", ""), ".csv"))
+readr::write_csv(output, file = output_file, append = file.exists(output_file))
 
-#print(paste("The results of this test have been saved to", output_file))
+print(paste("The results of this test have been saved to", output_file))
 
 ### -- Thank user and close session ----
 
