@@ -1,7 +1,5 @@
 # Step-by-Step Instructions
 
-## Log into the RStudio Workbench test environment
-
 1. Open your web browser (e.g. Microsoft Edge) and navigate to https://pwb-test.publichealthscotland.org/auth-sign-in
 2. Enter your LDAP user credentials (the same username and password you use to log into the old RStudio Server Pro environment) at the login screen, and click the "Sign In" button.
 ![image](https://user-images.githubusercontent.com/45657289/199207525-4c36f541-c4fd-47e8-b86a-bd5488e89410.png)
@@ -16,4 +14,21 @@
 ![image](https://user-images.githubusercontent.com/45657289/199212981-8bae5c75-ec03-4a12-a2a7-7965ca5a0e1d.png)
 8. Clone the High CPU Load repo on GitHub into your home directory on the RStudio Workbench test environment by issuing the following command at the terminal prompt:
 
-`git clone https:\\`
+`git clone https://github.com/Public-Health-Scotland/RSIP_UAT_High_CPU_Load.git`
+
+You should get some output as highlighted in yellow below.
+![image](https://user-images.githubusercontent.com/45657289/199214455-80f32f54-3fd1-495b-a8ea-a5bb607df0af.png)
+
+9. Navigate into the RSIP_UAT_High_CPU_Load directory (circled in red above), and click on the project file (circled in red below)
+![image](https://user-images.githubusercontent.com/45657289/199214890-cc92a109-aea2-42e6-9dc2-0da74aae87a3.png)
+
+10. Confirm that you want to open the project by clicking the "Yes" button in the prompt that appears (circled in blue above).
+11. Your Workbench session will restart.  It may take a few seconds for this to happen.
+12. Once it restarts, again type e.g. "yes" or "agree" at the prompt.
+13. Navigate into the "code" directory (circled in red below).
+![image](https://user-images.githubusercontent.com/45657289/199215530-994269bb-1e51-471b-8e50-c608d1d30065.png)
+
+14. Open the "99_Run_Test_0.R" script (circled in red below) and click the "Source" button (circled in blue below) to run the script.
+![image](https://user-images.githubusercontent.com/45657289/199216261-7daf0716-7c53-4c5a-a2d0-c35525e26c7b.png)
+
+It will take around 2 to 3 hours to run the script, and your Workbench session will close automatically once it's complete.  You can now close your web browser, and thank you for participating in this test.
